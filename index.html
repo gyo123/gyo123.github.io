@@ -1,72 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio de Gyo</title>
+  <title>Portfólio - Gyo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6f91e.js" crossorigin="anonymous"></script>
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #f1f5f9; color: #1e293b; line-height: 1.6; }
+    header {
+      background: #0f172a; color: white; padding: 1rem 2rem;
+      position: sticky; top: 0; z-index: 1000;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    body {
-      background: #f4f4f4; color: #333;
-      line-height: 1.6; padding: 2rem;
+    header nav a {
+      margin-left: 1rem; color: white; text-decoration: none;
+      font-weight: 600;
+    }
+    header nav a:hover {
+      text-decoration: underline;
     }
     .container {
-      max-width: 800px; margin: auto;
-      background: #fff; padding: 2rem; border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
     }
-    h1 {
-      font-size: 2.5rem; color: #0f172a;
-    }
-    h2 {
-      color: #1e293b; margin-top: 2rem;
-    }
-    p, li {
-      margin-top: 0.75rem;
-    }
-    ul {
-      list-style: none; padding-left: 0;
-    }
+    h1, h2 { margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; color: #0f172a; }
+    h2 { font-size: 1.8rem; color: #1e293b; border-bottom: 2px solid #cbd5e1; padding-bottom: .5rem; }
+    section { margin-bottom: 3rem; }
     .project {
-      border: 1px solid #e2e8f0; border-radius: 10px;
-      padding: 1rem; margin-top: 1.5rem;
-      background-color: #f8fafc;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .contact a {
-      display: inline-block; margin-top: 0.5rem;
-      color: #2563eb; text-decoration: none;
+      color: #2563eb;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    .icons a {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      color: #0f172a;
     }
   </style>
 </head>
 <body>
+  <header>
+    <div><strong>Gyo</strong></div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <h1>Olá 👋, Eu sou Gyo!</h1>
-    <p>Engenheiro de Dados apaixonado por Ciência de Dados no mundo digital. Com experiência prática em SQL, AWS, Power BI e Python. Atualmente estudando Machine Learning e Engenharia de ML.</p>
+    <section id="sobre">
+      <h1>Olá 👋, Eu sou Gyo</h1>
+      <p>Engenheiro de Dados com 3 anos de experiência, apaixonado por ciência de dados e aprendizado de máquina. Trabalho com SQL, AWS, Python, Power BI, e estou finalizando uma pós em Machine Learning Engineering.</p>
+    </section>
 
-    <h2>🧠 Projetos em Destaque</h2>
-    <div class="project">
-      <h3>Projeto: Modernização de Pipeline de Dados</h3>
-      <p><strong>Problema:</strong> Migração de sistema crítico sem downtime.</p>
-      <p><strong>Solução:</strong> Redesenho de arquitetura de ingestão de dados com stack moderna e integração entre múltiplos serviços.</p>
-      <p><strong>Resultado:</strong> Redução de falhas, maior escalabilidade, sem interrupção de serviços.</p>
-    </div>
-    <div class="project">
-      <h3>Projeto: Previsão de Evasão de Clientes com XGBoost</h3>
-      <p><strong>Problema:</strong> Alta taxa de churn em base de clientes.</p>
-      <p><strong>Solução:</strong> Modelo preditivo usando Python, Pandas, Scikit-Learn e XGBoost.</p>
-      <p><strong>Resultado:</strong> Acurácia de 87%, insights úteis para retenção de clientes.</p>
-    </div>
+    <section id="projetos">
+      <h2>🧠 Projetos em Destaque</h2>
 
-    <h2>📫 Contato</h2>
-    <div class="contact">
+      <div class="project">
+        <h3>Modernização de Pipeline de Dados</h3>
+        <p><strong>Problema:</strong> Migração crítica em ambiente de produção.</p>
+        <p><strong>Solução:</strong> Reestruturação do pipeline com arquitetura moderna e sem downtime.</p>
+        <p><strong>Resultado:</strong> Estabilidade, escalabilidade e confiança nos dados.</p>
+      </div>
+
+      <div class="project">
+        <h3>Previsão de Evasão de Clientes com XGBoost</h3>
+        <p><strong>Problema:</strong> Reduzir o churn em clientes SaaS.</p>
+        <p><strong>Solução:</strong> Modelo preditivo em Python usando Scikit-learn e XGBoost.</p>
+        <p><strong>Resultado:</strong> Acurácia de 87% e insights estratégicos para retenção.</p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>📫 Contato</h2>
       <p>Email: <a href="mailto:gyo1232010@hotmail.com">gyo1232010@hotmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/gyo123/" target="_blank">linkedin.com/in/gyo123</a></p>
-      <p>GitHub: <a href="https://github.com/gyo123" target="_blank">github.com/gyo123</a></p>
-    </div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/gyo123/" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/gyo123" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
   </div>
 </body>
 </html>
