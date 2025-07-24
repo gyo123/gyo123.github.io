@@ -1,1 +1,0 @@
-# gyo123.github.io
